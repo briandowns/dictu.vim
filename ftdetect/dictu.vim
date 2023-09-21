@@ -1,0 +1,1 @@
+autocmd BufNewFile,BufRead *.du :setfiletype dictu

@@ -1,0 +1,69 @@
+*dictu.txt* Basic functionality for the Dictu programming language
+
+===============================================================================
+CONTENTS                                                         *DictuContents*
+
+  1. Usage...................................................|DictuUsage|
+  2. Mappings................................................|DictuMappings|
+  3. Ex Commands.............................................|DictuExCommands|
+  4. Licence.................................................|DictuLicence|
+  5. Contributing............................................|DictuContributing|
+  6. Credits.................................................|DictuCredits|
+
+===============================================================================
+Section 1: Usage                                             *DictuUsage*
+
+This plugin provides basic syntax highlighting for Dictu files (files that end in
+`.dictu`). The specific colours will be based on your currently selected colour
+scheme.
+
+In addition, you can run the currently loaded Dictu script in two ways:
+
+Normal mode~
+
+>
+  <LocalLeader>r
+>
+
+Ex command~
+
+You can also run the script in Ex mode by running:
+
+>
+  :DictuRun
+>
+
+Options~
+
+You can control the behaviour of the plugin using the following options:
+
+`g:dictu_use_jdictu`. This is turned off by default, and so the plugin assumes that
+you are using `cdictu` for running the script. If you wish to use `jdictu` instead,
+then enable it in your Vim/NeoVim configuration file by including the following
+line:
+
+>
+  let g:dictu_use_jdictu = 1
+<
+
+===============================================================================
+Section 2: Mappings                                          *DictuMappings*
+
+`dictu.vim` has only one mapping for now:
+
+>
+  :nnoremap <buffer><LocalLeader>r :call dictu#running#DictuCompileAndRunFile()<Cr>
+<
+
+This sets a buffer-local mapping using '<LocalLeader>' (run `:help
+maplocalleader` if you are not familiar with it).
+
+===============================================================================
+Section 2: Ex Commands                                       *DictuExCommands*
+
+As mentioned in the |DictuUsage| section, you can also execute the currently
+loaded script using the 'Ex' mode command, `:DictuRun`, which is defined so:
+
+>
+  :command! DictuRun :call dictu#running#DictuCompileAndRunFile()
+<
