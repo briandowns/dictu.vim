@@ -6,9 +6,6 @@ CONTENTS                                                         *DictuContents*
   1. Usage...................................................|DictuUsage|
   2. Mappings................................................|DictuMappings|
   3. Ex Commands.............................................|DictuExCommands|
-  4. Licence.................................................|DictuLicence|
-  5. Contributing............................................|DictuContributing|
-  6. Credits.................................................|DictuCredits|
 
 ===============================================================================
 Section 1: Usage                                             *DictuUsage*
@@ -32,19 +29,6 @@ You can also run the script in Ex mode by running:
 >
   :DictuRun
 >
-
-Options~
-
-You can control the behaviour of the plugin using the following options:
-
-`g:dictu_use_jdictu`. This is turned off by default, and so the plugin assumes that
-you are using `cdictu` for running the script. If you wish to use `jdictu` instead,
-then enable it in your Vim/NeoVim configuration file by including the following
-line:
-
->
-  let g:dictu_use_jdictu = 1
-<
 
 ===============================================================================
 Section 2: Mappings                                          *DictuMappings*
